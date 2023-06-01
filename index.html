@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <title>Web Shoppe</title>
 </head>
 
@@ -22,9 +24,9 @@
 
         <div class="header">
 
-            <div class="grid">
+            <div class="grid wide">
 
-                <div class="header__navbar">
+                <div class="header__navbar hide-on-mobile-tablet">
 
                     <ul class="header__navbar-list">
                         <li class="pos header__navbar-item header__navbar-item--hasQR header__navbar-item--separate">
@@ -134,7 +136,12 @@
 
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+
+                    <label for="mobile-search-checkbox" class="header__mobile-search  hide-on-tablet">
+                        <i class="fa-solid fa-magnifying-glass header__mobile-search-icon" style="color: #fff;"></i>
+                    </label>
+
+                    <div class="header__logo hide-on-tablet">
                         <a href="#" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -145,6 +152,8 @@
                             </svg>
                         </a>
                     </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
 
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -262,13 +271,28 @@
                     </div>
                 </div>
             </div>
-
+            <ul class="header__sort-bar">
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link ">Relate</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Newest</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Hot </a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Price</a>
+                </li>
+            </ul>
         </div>
 
+
+
         <div class="container">
-            <div class="grid">
-                <div class="grid__row app-content">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row app-content sm-gutter">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category-heading">
                                 <i class="fa-solid fa-list category-heading-icon"></i>
@@ -321,8 +345,8 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="grid__column-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter_label">Order by</span>
                             <button class="btn home-filter_btn">Popular</button>
                             <button class="btn btn--primary home-filter_btn">Newest</button>
@@ -357,10 +381,42 @@
                                 </div>
                             </div>
                         </div>
+
+                        <nav class="mobile-category ">
+                            <ul class="mobile-category-list">
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">
+                                        Light Novel
+                                    </a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">
+                                        Light Novel
+                                    </a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">
+                                        Light Novel
+                                    </a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">
+                                        Light Novel
+                                    </a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">
+                                        Light Novel
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </nav>
+
                         <div class="home-product">
                             <!-- Grid > row > col -->
-                            <div class="grid__row">
-                                <div class="grid__col-2">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaOGN-yqHWOmkPnOe4kP_30bZLgf6hMWqCw&usqp=CAU);">
@@ -391,7 +447,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaOGN-yqHWOmkPnOe4kP_30bZLgf6hMWqCw&usqp=CAU);">
@@ -422,7 +478,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaOGN-yqHWOmkPnOe4kP_30bZLgf6hMWqCw&usqp=CAU);">
@@ -453,7 +509,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaOGN-yqHWOmkPnOe4kP_30bZLgf6hMWqCw&usqp=CAU);">
@@ -484,7 +540,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaOGN-yqHWOmkPnOe4kP_30bZLgf6hMWqCw&usqp=CAU);">
@@ -515,7 +571,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaOGN-yqHWOmkPnOe4kP_30bZLgf6hMWqCw&usqp=CAU);">
@@ -546,7 +602,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaOGN-yqHWOmkPnOe4kP_30bZLgf6hMWqCw&usqp=CAU);">
@@ -577,7 +633,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaOGN-yqHWOmkPnOe4kP_30bZLgf6hMWqCw&usqp=CAU);">
@@ -608,7 +664,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaOGN-yqHWOmkPnOe4kP_30bZLgf6hMWqCw&usqp=CAU);">
@@ -639,7 +695,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaOGN-yqHWOmkPnOe4kP_30bZLgf6hMWqCw&usqp=CAU);">
@@ -711,9 +767,9 @@
         </div>
 
         <div class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__col-2">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer-heading">Customer care</h3>
                         <ul class="footer-list">
                             <li class="footer-list-item">
@@ -754,7 +810,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer-heading">About Shoppe</h3>
                         <ul class="footer-list">
                             <li class="footer-list-item">
@@ -786,7 +842,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer-heading">Payment</h3>
                         <ul class="footer-payment-list">
                             <li class="footer-payment-app">
@@ -833,7 +889,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer-heading">Follow us on</h3>
                         <ul class="footer-list">
                             <li class="footer-list-item">
@@ -857,32 +913,38 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2">'
-                        <h3 class="footer-heading">Download Shoppe</h3>
-                        <div class="footer__download">
-                            <img src="./assets/img/qr_code.png" alt="QR Code" class="footer__download-qr">
-                            <div class="footer__download-apps">
-                                <a href="" class="footer__download-link">
-                                    <img src="./assets/img/ggplay.png" alt="Google Play" class="footer__download-app-img">
-                                </a>
-                                <a href="" class="footer__download-link">
-                                    <img src="./assets/img/appstore.png" alt="App Store" class="footer__download-app-img">
-                                </a>
-                                <a href="" class="footer__download-link"> 
-                                    <img src="./assets/img/AppGallery.png" alt="App Gallery class="footer__download-app-img">
-                                </a>
+                    <div class="col l-2-4 m-8 c-12 ">
+                        <h3 class="footer-heading footer-heading-lastChild">Download Shoppe</h3>
+                        <div class="footer_content-lastChild">
+                            <div class="footer__download">
+                                <img src="./assets/img/qr_code.png" alt="QR Code" class="footer__download-qr">
+                                <div class="footer__download-apps">
+                                    <a href="" class="footer__download-link">
+                                        <img src="./assets/img/ggplay.png" alt="Google Play"
+                                            class="footer__download-app-img">
+                                    </a>
+                                    <a href="" class="footer__download-link">
+                                        <img src="./assets/img/appstore.png" alt="App Store"
+                                            class="footer__download-app-img">
+                                    </a>
+                                    <a href="" class="footer__download-link">
+                                        <img src="./assets/img/AppGallery.png" alt="App Gallery "
+                                            class="footer__download-app-img">
+                                    </a>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="grid">
-                    
-                        <h3 class="footer-text"> 2023 Shopee. Tất cả các quyền được bảo lưu.</h3>
-                    
+                <div class="grid wide">
+
+                    <h3 class="footer-text"> 2023 Shopee. Tất cả các quyền được bảo lưu.</h3>
+
                 </div>
-                
+
             </div>
         </div>
     </div>
